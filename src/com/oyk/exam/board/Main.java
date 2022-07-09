@@ -29,10 +29,7 @@ public class Main {
                 int id = articlesLastId + 1;
                 articlesLastId = id;
 
-                Article article = new Article();
-                article.id = id;
-                article.title = title;
-                article.body = body;
+                Article article = new Article(id,title,body);
 
                 System.out.printf("%d번 게시물이 입력되었습니다.\n", article.id);
             }
@@ -49,4 +46,10 @@ class Article {
     int id;
     String title;
     String body;
+
+    Article(int id, String title, String body) {
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
 }
