@@ -45,8 +45,9 @@ public class Main {
 
                 Article article = new Article(id,title,body);
                 lastArticle = article;
+                articles.add(article);
 
-                System.out.printf("생성된 게시물 객체 : {id: %d, title: %s, body: %s}\n",article.id,article.title,article.body);
+                System.out.println("생성된 게시물 객체 : " + article);
                 System.out.printf("%d번 게시물이 입력되었습니다.\n", article.id);
             }
 
@@ -99,5 +100,9 @@ class Article {
         this.id = id;
         this.title = title;
         this.body = body;
+    }
+    @Override
+    public String toString() {
+        return String.format("{id: %d, title: \"%s\", body: \"%s\"}", id, title, body);
     }
 }
