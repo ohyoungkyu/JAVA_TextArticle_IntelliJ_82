@@ -21,6 +21,9 @@ public class Main {
 
         makeTestData(articles);
 
+        if(articles.size() > 0) {
+            articlesLastId = articles.get(articles.size() - 1).id;
+        }
 
         while(true) {
 
@@ -43,6 +46,7 @@ public class Main {
                 Article article = new Article(id,title,body);
                 lastArticle = article;
 
+                System.out.printf("생성된 게시물 객체 : {id: %d, title: %s, body: %s}\n",article.id,article.title,article.body);
                 System.out.printf("%d번 게시물이 입력되었습니다.\n", article.id);
             }
 
