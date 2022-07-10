@@ -16,7 +16,7 @@ public class Main {
         System.out.println("== 프로그램 시작 ==");
 
         int articlesLastId = 0;
-        Article lastArticle = null;
+
         ArrayList<Article> articles = new ArrayList<Article>();
 
         makeTestData(articles);
@@ -44,7 +44,7 @@ public class Main {
                 articlesLastId = id;
 
                 Article article = new Article(id,title,body);
-                lastArticle = article;
+
                 articles.add(article);
 
                 System.out.println("생성된 게시물 객체 : " + article);
@@ -53,12 +53,12 @@ public class Main {
 
             else if(cmd.equals("/usr/article/detail")) {
 
-                if(lastArticle == null) {
+                if(articles.isEmpty()) {
                     System.out.println("게시물이 존재하지 않습니다.");
                     continue;
                 }
 
-                Article article = lastArticle;
+                Article article = articles.get(articles.size()-1);
 
                 System.out.println(" 게시물 상세내용 - ");
 
