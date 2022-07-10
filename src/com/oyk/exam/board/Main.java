@@ -1,10 +1,11 @@
 package com.oyk.exam.board;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    static void makeTestData(ArrayList<Article> articles) {
+    static void makeTestData(List<Article> articles) {
         articles.add(new Article(1,"제목1","내용1"));
         articles.add(new Article(2,"제목2","내용2"));
         articles.add(new Article(3,"제목3","내용3"));
@@ -17,7 +18,7 @@ public class Main {
 
         int articlesLastId = 0;
 
-        ArrayList<Article> articles = new ArrayList<Article>();
+        List<Article> articles = new ArrayList<>();
 
         makeTestData(articles);
 
