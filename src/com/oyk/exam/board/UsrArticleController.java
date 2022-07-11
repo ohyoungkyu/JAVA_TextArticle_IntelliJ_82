@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsrArticleController {
-    int articlesLastId;
-    List<Article> articles;
+    private int articlesLastId;
+    private List<Article> articles;
 
     UsrArticleController() {
         articlesLastId = 0;

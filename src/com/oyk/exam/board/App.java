@@ -29,6 +29,9 @@ public class App {
             else if( rq.getUrlPath().equals("/usr/article/write")) {
                 Container.usrArticleController.actionWrite(rq);
             }
+            else if( rq.getUrlPath().equals("/usr/member/join")) {
+                Container.usrmemberController.actionjoin(rq);
+            }
             else {
                 System.out.printf("입력된 명령어 : %s\n",cmd);
             }
